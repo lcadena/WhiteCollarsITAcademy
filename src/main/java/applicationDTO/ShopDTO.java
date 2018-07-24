@@ -8,6 +8,7 @@ import domain.Shop;
 public class ShopDTO {
 	public String shopName;
 	public int capacity;
+
 	public List<PictureDTO> pictures = new ArrayList<>();
 	
 	public ShopDTO(Shop s) throws Exception {
@@ -27,7 +28,5 @@ public class ShopDTO {
 	public List<PictureDTO> getPictures() {
 		return pictures;
 	}
-	
-	
-	
+
 }
