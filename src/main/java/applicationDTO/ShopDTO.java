@@ -1,22 +1,19 @@
 package applicationDTO;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import domain.Shop;
 
 public class ShopDTO {
 	public String shopName;
-	public int capacityMax;
-	public List<PictureDTO> pictures = new ArrayList<>();
-	public ShopDTO(Shop s) {
+	public int capacity;
+	public ShopDTO(Shop s) throws Exception {
+		if(s == null) throw new Exception();
 		this.shopName = s.getShopName();
-		this.capacityMax = s.getCapacityMax();
-		this.pictures = convertToDTO(s.getAllPictures());
+		this.capacity = s.getCapacity();			
 	}
-	
-	
-	
-	
-	
+	public String getShopName() {
+		return shopName;
+	}
+	public int getCapacity() {
+		return capacity;
+	}	
 }

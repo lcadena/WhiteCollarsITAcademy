@@ -1,14 +1,12 @@
 package domain;
 
-import java.util.Date;
-
 public class Picture {
 	public String pictureName;
 	public String pictureAuthor;
 	public double price;
-	public Date inputDate;
+	public String inputDate;
 		
-	public Picture(String pictureName, String pictureAuthor, double price, Date inputDate) throws Exception {
+	public Picture(String pictureName, String pictureAuthor, double price, String inputDate) throws Exception {
 		if(pictureName.trim().equals("")) throw new Exception();
 		if(price < 0) throw new Exception();
 		if(inputDate == null) throw new Exception();
@@ -30,6 +28,10 @@ public class Picture {
 	public void setPictureAuthor(String pictureAuthor) {
 		this.pictureAuthor = pictureAuthor;
 	}
+	public String toString() {
+		return (pictureName + " " + pictureAuthor);
+	}
+	
 
 	public double getPrice() {
 		return price;
@@ -39,10 +41,10 @@ public class Picture {
 		this.price = price;
 	}
 
-	public Date getInputDate() {
+	public String getInputDate() {
 		return inputDate;
 	}
-	public void setInputDate(Date inputDate) {
+	public void setInputDate(String inputDate) {
 		this.inputDate = inputDate;
 	}
 

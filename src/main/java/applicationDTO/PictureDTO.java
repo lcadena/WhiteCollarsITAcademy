@@ -1,6 +1,6 @@
 package applicationDTO;
 
-import java.util.Date;
+
 
 import domain.Picture;
 
@@ -8,7 +8,7 @@ public class PictureDTO {
 	public String pictureName;
 	public String pictureAuthor;
 	public double price;
-	public Date inputDate;
+	public String inputDate;
 	
 	public PictureDTO(Picture p) {
 		this.pictureName = p.getPictureName();
@@ -16,8 +16,26 @@ public class PictureDTO {
 		this.price = p.getPrice();
 		this.inputDate = p.getInputDate();
 	}
-	
-	
-	
+
+	public String getPictureName() {
+		return pictureName;
+	}
+
+	public String getPictureAuthor() {
+		return pictureAuthor;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public String getInputDate() {
+		return inputDate;
+	}
+
+	public String getValues() {
+		return "name: "+getPictureName() + " , author: "+ getPictureAuthor()+
+		" , price: "+ getPrice()+" , date: "+ getInputDate();
+	}
 	
 }
