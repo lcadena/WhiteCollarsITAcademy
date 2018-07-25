@@ -37,7 +37,7 @@ public class ShopController {
 		
 	}
 	
-	/*public List<PictureDTO> getAllPicturesByShopid(int id) {
+	/*public List<PictureDTO> getAllPicturesFromShop(int id) {
 		Shop s2 = repository.getShop(id);
 		List<PictureDTO> pictures = new ArrayList<>();
 		for(Picture p : s2.getAllPictures(id)) {

@@ -29,9 +29,5 @@ public class ShopRepository {
 		return null;
 		
 	}
-	
-	/*public Shop findShop(String shopId) {					
-		return datastore.find(University.class).field("id").equal(uniId).get();
-	}*/
 
 }
