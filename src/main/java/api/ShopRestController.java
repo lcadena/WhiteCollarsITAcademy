@@ -19,12 +19,12 @@ import com.google.gson.JsonSyntaxException;
 @RequestMapping("shops/{shopId}/pictures")
 public class ShopRestController {
 
-	@RequestMapping(method=RequestMethod.GET)	
+/*	@RequestMapping(method=RequestMethod.GET)	
 	public String getAllPictures(@PathVariable String shopId) throws Exception{		
 		List<PictureDTO> allPictures= new ShopController().getAllPicturesFromShop(shopId);
 	
 		
 		Gson gson=new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
 		return gson.toJson(allPictures);
-	}
+	}*/
 }

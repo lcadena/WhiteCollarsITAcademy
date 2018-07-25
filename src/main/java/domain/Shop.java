@@ -10,11 +10,12 @@ public class Shop {
 	public List<Picture> allPictures = new ArrayList<Picture>();
 	
 	public Shop (int shopID, String shopName, int capacity) throws Exception {
-		if(shopID < -1) throw new Exception();
+		if(shopID == 0) throw new Exception();
 		if(shopName.trim().equals("")) throw new Exception();
 		if(capacity < 1) throw new Exception();
 		this.shopName = shopName;
 		this.capacity = capacity;
+		this.shopID = shopID;
 	}
 	
 	public String getShopName() {

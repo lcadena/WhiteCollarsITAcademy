@@ -18,17 +18,17 @@ public class ShopController {
 	
 	public void createShop(int id, String shopName, int capacity) throws Exception {
 		Shop shop = new Shop(id, shopName, capacity);		
-		repository.saveShop(shop);
+		repository.addShop(shop);
 	}
 	
-	public void addPicture(String pictureName, String pictureAuthor, double price, String inputDate) throws Exception {
+	public void addPicture(String pictureName, String pictureAuthor, double price, String inputDate, int shopID) throws Exception {
 		Picture p = new Picture(pictureName, pictureAuthor, price, inputDate);
-		Shop s = repository.getShop();
+		Shop s = repository.getShopById(shopID);
 		s.addPicture(p);
 	}
 	
-	public List<PictureDTO> getAllPictures() throws Exception{
-		Shop s = repository.getShop();
+	public List<PictureDTO> getAllPictures(int shopID) throws Exception{
+		Shop s = repository.getShopById(shopID);
 		List<PictureDTO> pictures = new ArrayList<>();
 		for(Picture p : s.getAllPictures()) {
 			pictures.add(new PictureDTO(p));
@@ -47,14 +47,14 @@ public class ShopController {
 		
 	}*/
 	
-	public String getShopName() throws Exception {
-		return repository.getShop().getShopName();
+	public String getShopName(int shoID) throws Exception {
+		return repository.getShopById(shoID).getShopName();
 	}
 	
-	public Shop getArtGallery() throws Exception {
+/*	public Shop getArtGallery() throws Exception {
 		Shop s = repository.getShop();
 		return s;
 		
-	}
+	}*/
 	
 }
